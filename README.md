@@ -1,5 +1,5 @@
 # Life Recycled
-Life Recycled is a React web application for an organ-donation information and verification flow around the official Government of India NOTTO registration portal. The application records its own session, commitment, redirect, and verification-related events. It does not independently verify a user's NOTTO registration.
+Life Recycled (https://liferecycled.in) is a React web application for an organ-donation information and verification flow around the official Government of India NOTTO registration portal. The application records its own session, commitment, redirect, and verification-related events. It does not independently verify a user's NOTTO registration.
 
 ## Overview
 
