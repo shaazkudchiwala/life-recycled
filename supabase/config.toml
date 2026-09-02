@@ -1,0 +1,16 @@
+project_id = "bobccptbqyeyrepbxifk"
+
+[functions.session-manager]
+verify_jwt = false
+
+[functions.verify-otp]
+verify_jwt = false
+
+[functions.get-widget-token]
+verify_jwt = false
+
+[functions.get-metrics]
+verify_jwt = false
+
+[functions.notto-redirect]
+verify_jwt = false

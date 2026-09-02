@@ -1,0 +1,231 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Life Recycled Design System
+   A civic-tech platform for organ donation awareness
+   Colors: Trustworthy, calm, life-affirming
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:wght@400;500;600&display=swap');
+
+@layer base {
+  :root {
+    /* Core brand colors - Civic trust palette */
+    --background: 180 20% 99%;
+    --foreground: 200 25% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 200 25% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 200 25% 15%;
+
+    /* Primary - Deep Ocean Teal (trust, stability, life) */
+    --primary: 192 70% 28%;
+    --primary-foreground: 180 20% 99%;
+
+    /* Secondary - Sage Green (renewal, growth) */
+    --secondary: 150 25% 92%;
+    --secondary-foreground: 150 35% 25%;
+
+    /* Muted - Warm neutral */
+    --muted: 180 15% 95%;
+    --muted-foreground: 200 15% 40%;
+
+    /* Accent - Soft Coral (heart, warmth) */
+    --accent: 15 70% 92%;
+    --accent-foreground: 15 60% 35%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 180 15% 88%;
+    --input: 180 15% 88%;
+    --ring: 192 70% 28%;
+
+    --radius: 0.75rem;
+
+    /* Custom semantic tokens */
+    --success: 150 55% 40%;
+    --success-foreground: 0 0% 100%;
+    --warning: 38 92% 50%;
+    --warning-foreground: 38 92% 15%;
+    --info: 192 70% 45%;
+    --info-foreground: 0 0% 100%;
+
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(192 70% 28%) 0%, hsl(180 50% 35%) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(180 20% 99%) 0%, hsl(180 15% 96%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(180 15% 98%) 100%);
+
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 hsl(200 25% 15% / 0.05);
+    --shadow-md: 0 4px 6px -1px hsl(200 25% 15% / 0.08), 0 2px 4px -1px hsl(200 25% 15% / 0.04);
+    --shadow-lg: 0 10px 15px -3px hsl(200 25% 15% / 0.08), 0 4px 6px -2px hsl(200 25% 15% / 0.04);
+    --shadow-elevated: 0 20px 25px -5px hsl(200 25% 15% / 0.1), 0 10px 10px -5px hsl(200 25% 15% / 0.04);
+
+    /* Sidebar */
+    --sidebar-background: 180 15% 97%;
+    --sidebar-foreground: 200 25% 15%;
+    --sidebar-primary: 192 70% 28%;
+    --sidebar-primary-foreground: 180 20% 99%;
+    --sidebar-accent: 180 15% 93%;
+    --sidebar-accent-foreground: 200 25% 15%;
+    --sidebar-border: 180 15% 88%;
+    --sidebar-ring: 192 70% 28%;
+  }
+
+  .dark {
+    --background: 200 25% 8%;
+    --foreground: 180 15% 95%;
+
+    --card: 200 20% 12%;
+    --card-foreground: 180 15% 95%;
+
+    --popover: 200 20% 12%;
+    --popover-foreground: 180 15% 95%;
+
+    --primary: 180 60% 45%;
+    --primary-foreground: 200 25% 8%;
+
+    --secondary: 150 20% 18%;
+    --secondary-foreground: 150 25% 85%;
+
+    --muted: 200 20% 18%;
+    --muted-foreground: 200 15% 60%;
+
+    --accent: 15 40% 20%;
+    --accent-foreground: 15 50% 85%;
+
+    --destructive: 0 62% 45%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 200 20% 22%;
+    --input: 200 20% 22%;
+    --ring: 180 60% 45%;
+
+    --success: 150 50% 45%;
+    --success-foreground: 0 0% 100%;
+
+    --gradient-hero: linear-gradient(135deg, hsl(200 25% 12%) 0%, hsl(192 40% 18%) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(200 25% 8%) 0%, hsl(200 20% 10%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(200 20% 12%) 0%, hsl(200 20% 10%) 100%);
+
+    --shadow-sm: 0 1px 2px 0 hsl(0 0% 0% / 0.3);
+    --shadow-md: 0 4px 6px -1px hsl(0 0% 0% / 0.4), 0 2px 4px -1px hsl(0 0% 0% / 0.2);
+    --shadow-lg: 0 10px 15px -3px hsl(0 0% 0% / 0.4), 0 4px 6px -2px hsl(0 0% 0% / 0.2);
+    --shadow-elevated: 0 20px 25px -5px hsl(0 0% 0% / 0.5), 0 10px 10px -5px hsl(0 0% 0% / 0.2);
+
+    --sidebar-background: 200 20% 10%;
+    --sidebar-foreground: 180 15% 95%;
+    --sidebar-primary: 180 60% 45%;
+    --sidebar-primary-foreground: 200 25% 8%;
+    --sidebar-accent: 200 20% 16%;
+    --sidebar-accent-foreground: 180 15% 95%;
+    --sidebar-border: 200 20% 22%;
+    --sidebar-ring: 180 60% 45%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Source Serif 4', Georgia, serif;
+    @apply font-semibold tracking-tight;
+  }
+}
+
+@layer components {
+  .container-narrow {
+    @apply mx-auto max-w-3xl px-4 sm:px-6;
+  }
+
+  .container-wide {
+    @apply mx-auto max-w-6xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .card-elevated {
+    @apply rounded-xl border border-border bg-card p-8 shadow-md;
+    box-shadow: var(--shadow-md);
+  }
+
+  .card-subtle {
+    @apply rounded-lg border border-border bg-card/50 p-4;
+  }
+
+  .section-padding {
+    @apply py-20 sm:py-24 lg:py-28;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .prose-civic {
+    @apply text-foreground/90 leading-relaxed;
+  }
+
+  .prose-civic p {
+    @apply mb-4;
+  }
+
+  .prose-civic h2 {
+    @apply mt-8 mb-4 text-2xl font-semibold text-foreground;
+  }
+
+  .prose-civic h3 {
+    @apply mt-6 mb-3 text-xl font-medium text-foreground;
+  }
+
+  .prose-civic ul {
+    @apply my-4 ml-6 list-disc space-y-2;
+  }
+
+  .prose-civic li {
+    @apply text-foreground/85;
+  }
+}
+
+@layer utilities {
+  .animate-fade-up {
+    animation: fadeUp 0.5s ease-out forwards;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.4s ease-out forwards;
+  }
+
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .delay-100 { animation-delay: 100ms; }
+  .delay-200 { animation-delay: 200ms; }
+  .delay-300 { animation-delay: 300ms; }
+  .delay-400 { animation-delay: 400ms; }
+}
